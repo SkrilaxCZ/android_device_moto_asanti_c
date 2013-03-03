@@ -104,7 +104,12 @@ on boot
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 on emmc-fs
-    mount_all /fstab.qcom
+    wait /dev/block/mmcblk0p1
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system rw noatime nodiratime noauto_da_alloc,barrier=1
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/userdata /data rw nosuid nodev noatime nodiratime noauto_da_alloc,barrier=1
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/cache /cache rw nosuid nodev noatime nodiratime noauto_da_alloc,barrier=1
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro nosuid nodev noatime nodiratime barrier=1
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persist /persist ro nosuid nodev noatime nodiratime barrier=1
 
 on post-fs
     chmod 755 /system/etc/init.qcom.bt.sh

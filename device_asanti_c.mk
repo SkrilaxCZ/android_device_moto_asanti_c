@@ -40,7 +40,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/root/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
 	$(LOCAL_PATH)/root/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
 	$(LOCAL_PATH)/root/init.qcom.rc:root/init.qcom.rc \
-	$(LOCAL_PATH)/root/fstab.qcom:root/fstab.qcom \
 	$(LOCAL_PATH)/root/init.target.rc:root/init.target.rc
 
 #media
