@@ -38,31 +38,29 @@ service qcamerasvr /system/bin/logwrapper /system/bin/qcamerasrvwrapper.sh
 on init
    mkdir /pds 0755 root root
    mkdir /firmware 0771 system system
-   mkdir /storage 0050 system sdcard_r
    mkdir /persist 0771 system system
-   export EXTERNAL_STORAGE /storage/sdcard0
-   export SECONDARY_STORAGE /storage/sdcard1
-   mkdir /storage/sdcard0 0000 system system
-   mkdir /storage/sdcard1 0000 system system
-   symlink /storage/sdcard0 /sdcard
-   symlink /storage/sdcard0 /mnt/sdcard
-   symlink /storage/sdcard1 /external_sd
+   export EXTERNAL_STORAGE /mnt/sdcard
+   export SECONDARY_STORAGE /mnt/external1
+   mkdir /mnt/sdcard 0000 system system
+   mkdir /mnt/external1 0000 system system
+   symlink /mnt/sdcard /sdcard
+   symlink /mnt/external1 /external1
 
 # Mount Points for External Storage Devices
-    mkdir /storage/usbdisk_1.1.1 0755 system system
-    mkdir /storage/usbdisk_1.0 0755 system system
-    mkdir /storage/usbdisk_1.1 0755 system system
-    mkdir /storage/usbdisk_1.2 0755 system system
-    mkdir /storage/usbdisk_1.3 0755 system system
-    mkdir /storage/usbdisk_1.4 0755 system system
-    mkdir /storage/usbdisk_1.5 0755 system system
-    mkdir /storage/usbdisk_1.6 0755 system system
-    mkdir /storage/usbdisk_1.7 0755 system system
+    mkdir /mnt/usbdisk_1.1.1 0755 system system
+    mkdir /mnt/usbdisk_1.0 0755 system system
+    mkdir /mnt/usbdisk_1.1 0755 system system
+    mkdir /mnt/usbdisk_1.2 0755 system system
+    mkdir /mnt/usbdisk_1.3 0755 system system
+    mkdir /mnt/usbdisk_1.4 0755 system system
+    mkdir /mnt/usbdisk_1.5 0755 system system
+    mkdir /mnt/usbdisk_1.6 0755 system system
+    mkdir /mnt/usbdisk_1.7 0755 system system
 
 # Mount Points for remote storage devices
-    mkdir /storage/rfs0 0755 system system
-    mkdir /storage/rfs1 0755 system system
-    mkdir /storage/rfs2 0755 system system
+    mkdir /mnt/rfs0 0755 system system
+    mkdir /mnt/rfs1 0755 system system
+    mkdir /mnt/rfs2 0755 system system
 
 # Write the CDROM Block Device Path into the sysfs
    write /sys/class/android_usb/android0/cdrom_blkdev "/dev/block/platform/msm_sdcc.1/by-name/cdrom"
