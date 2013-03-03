@@ -115,6 +115,9 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/kernel/modules/vpnclient.ko:system/lib/modules/vpnclient.ko \
 	$(LOCAL_PATH)/kernel/modules/prima/prima_wlan.ko:system/lib/modules/prima/prima_wlan.ko
 
+PRODUCT_PACKAGES += \
+	wlan.ko
+
 PRODUCT_LOCALES := en_US
 PRODUCT_LOCALES += hdpi
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
