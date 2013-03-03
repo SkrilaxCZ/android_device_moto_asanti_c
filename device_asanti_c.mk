@@ -87,6 +87,34 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/adreno/lib/libOpenVG.so:system/lib/libOpenVG.so \
 	$(LOCAL_PATH)/proprietary/adreno/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so
 
+#kernel modules
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/kernel/modules/ansi_cprng.ko:system/lib/modules/ansi_cprng.ko \
+	$(LOCAL_PATH)/kernel/modules/bluetooth-power.ko:system/lib/modules/bluetooth-power.ko \
+	$(LOCAL_PATH)/kernel/modules/commkm.ko:system/lib/modules/commkm.ko \
+	$(LOCAL_PATH)/kernel/modules/config.ko:system/lib/modules/config.ko \
+	$(LOCAL_PATH)/kernel/modules/dma_test.ko:system/lib/modules/dma_test.ko \
+	$(LOCAL_PATH)/kernel/modules/eeprom_93cx6.ko:system/lib/modules/eeprom_93cx6.ko \
+	$(LOCAL_PATH)/kernel/modules/evbug.ko:system/lib/modules/evbug.ko \
+	$(LOCAL_PATH)/kernel/modules/evfwd.ko:system/lib/modules/evfwd.ko \
+	$(LOCAL_PATH)/kernel/modules/gspca_main.ko:system/lib/modules/gspca_main.ko \
+	$(LOCAL_PATH)/kernel/modules/ks8851.ko:system/lib/modules/ks8851.ko \
+	$(LOCAL_PATH)/kernel/modules/lcd.ko:system/lib/modules/lcd.ko \
+	$(LOCAL_PATH)/kernel/modules/msm-buspm-dev.ko:system/lib/modules/msm-buspm-dev.ko \
+	$(LOCAL_PATH)/kernel/modules/mvpkm.ko:system/lib/modules/mvpkm.ko \
+	$(LOCAL_PATH)/kernel/modules/pvtcpkm.ko:system/lib/modules/pvtcpkm.ko \
+	$(LOCAL_PATH)/kernel/modules/qce40.ko:system/lib/modules/qce40.ko \
+	$(LOCAL_PATH)/kernel/modules/qcedev.ko:system/lib/modules/qcedev.ko \
+	$(LOCAL_PATH)/kernel/modules/qcrypto.ko:system/lib/modules/qcrypto.ko \
+	$(LOCAL_PATH)/kernel/modules/radio-iris-transport.ko:system/lib/modules/radio-iris-transport.ko \
+	$(LOCAL_PATH)/kernel/modules/reset_modem.ko:system/lib/modules/reset_modem.ko \
+	$(LOCAL_PATH)/kernel/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
+	$(LOCAL_PATH)/kernel/modules/spidev.ko:system/lib/modules/spidev.ko \
+	$(LOCAL_PATH)/kernel/modules/tcp_htcp.ko:system/lib/modules/tcp_htcp.ko \
+	$(LOCAL_PATH)/kernel/modules/tcp_westwood.ko:system/lib/modules/tcp_westwood.ko \
+	$(LOCAL_PATH)/kernel/modules/vpnclient.ko:system/lib/modules/vpnclient.ko \
+	$(LOCAL_PATH)/kernel/modules/prima/prima_wlan.ko:system/lib/modules/prima/prima_wlan.ko
+
 PRODUCT_LOCALES := en_US
 PRODUCT_LOCALES += hdpi
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi

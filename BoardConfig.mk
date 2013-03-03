@@ -39,15 +39,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Dex
 WITH_DEXPREOPT := true
 
-# Inline kernel building
-TARGET_KERNEL_SOURCE := kernel/moto/asanti_c
-TARGET_KERNEL_CONFIG := msm8960_mmi_defconfig
-
-# copy all kernel modules under the "kernel/modules" directory to system/lib/modules
-PRODUCT_COPY_FILES += $(shell \
-	find $(LOCAL_PATH)/kernel/modules -name '*.ko' 2> /dev/null \
-	| sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
-	| tr '\n' ' ')
+# Prebuilt kernel
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel/zImage
 
 BOARD_KERNEL_CMDLINE := console=/dev/null androidboot.hardware=qcom user_debug=31 loglevel=1 msm_rtb.filter=0x3F kgsl.mmutype=gpummu zcache
 BOARD_KERNEL_BASE := 0x80200000
